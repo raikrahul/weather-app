@@ -1,88 +1,108 @@
-/* General Body Styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #00c6ff, #0072ff);
+    color: #ffffff;
+    text-align: center;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
   
-  /* Weather App Container */
-  .weather-app {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    text-align: center;
+  .weather-container {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
   }
   
-  /* App Title */
-  .weather-app h1 {
-    font-size: 24px;
+  .weather-header {
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   }
   
-  /* Input Field Styling */
-  .weather-app input[type="text"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  /* Search Button Styling */
-  .weather-app button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .weather-app button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Weather Information Display */
-  .weather-info {
-    display: none;
-    margin-top: 20px;
-  }
-  
-  /* Weather Icon Styling */
   .weather-icon {
     width: 100px;
     height: 100px;
-    object-fit: contain;
     margin: 10px auto;
   }
   
-  /* Temperature Styling */
   .temperature {
-    font-size: 28px;
+    font-size: 56px;
     font-weight: bold;
-    margin-top: 10px;
+    margin: 15px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   }
   
-  /* Weather Description Styling */
   .description {
-    font-size: 18px;
-    color: #555;
-    margin-top: 5px;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 10px 0;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   }
   
-  /* Error Message Styling */
+  .location {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .input-container {
+    margin: 20px 0;
+  }
+  
+  #city-input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    width: 70%;
+    font-size: 16px;
+  }
+  
+  #search-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #0072ff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #search-button:hover {
+    background-color: #0072ff;
+    color: #ffffff;
+    transform: scale(1.05);
+  }
+  
   .error-message {
     color: red;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .footer {
     font-size: 14px;
-    margin-top: 15px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7);
   }
   
